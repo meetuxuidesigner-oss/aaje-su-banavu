@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "io.github.meetuxuidesigner_oss.twa",
+        "sha256_cert_fingerprints": ["1C:79:B1:85:99:44:DE:82:7A:EB:77:59:AB:F1:7E:0A:03:F6:F4:BE:87:92:72:94:C6:FE:91:CE:DF:61:0C:6A"]
+      }
+    }]
