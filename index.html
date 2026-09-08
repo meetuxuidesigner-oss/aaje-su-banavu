@@ -36,7 +36,11 @@
     overscroll-behavior: none;
   }
   body{ display:flex; justify-content:center; }
-  #root{ width:100%; max-width:430px; position:relative; overflow:hidden; height:100vh; }
+  #root{
+    width:100%; max-width:430px; position:relative; overflow:hidden;
+    height:100vh;      /* fallback for old phones */
+    height:100dvh;     /* real visible height — excludes address bar and nav bar */
+  }
 
   /* ---------- Splash ---------- */
   #splash{
@@ -58,7 +62,14 @@
   #home{
     position:absolute; inset:0;
     display:flex; flex-direction:column;
-    padding: 26px 22px calc(22px + env(safe-area-inset-bottom));
+    padding: 22px 22px calc(18px + env(safe-area-inset-bottom));
+    overflow:hidden;
+  }
+  .deck{
+    min-height: 0;   /* lets the deck shrink instead of pushing the button off-screen */
+  }
+  .card{
+    max-height: 100%;
   }
   .meal-line{
     font-size:13px; color:var(--ink-soft); margin:0 0 2px;
